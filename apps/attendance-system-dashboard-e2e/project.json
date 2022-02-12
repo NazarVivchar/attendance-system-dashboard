@@ -1,0 +1,30 @@
+{
+  "root": "apps/attendance-system-dashboard-e2e",
+  "sourceRoot": "apps/attendance-system-dashboard-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/attendance-system-dashboard-e2e/cypress.json",
+        "devServerTarget": "attendance-system-dashboard:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "attendance-system-dashboard:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/attendance-system-dashboard-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["attendance-system-dashboard"]
+}

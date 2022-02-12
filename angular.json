@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "attendance-system-dashboard": "apps/attendance-system-dashboard",
+    "attendance-system-dashboard-e2e": "apps/attendance-system-dashboard-e2e"
+  }
+}
