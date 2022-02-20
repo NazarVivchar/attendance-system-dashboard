@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'attendance-system-root',
+  selector: 'asd-app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

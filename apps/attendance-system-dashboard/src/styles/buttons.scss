@@ -1,0 +1,25 @@
+.mat-raised-button {
+  border-radius: 18px !important;
+  line-height: 24px;
+
+  .mat-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  mat-icon {
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    color: #1FD1F9;
+
+    &.prefix {
+      padding-right: 10px;
+    }
+
+    &.suffix {
+      padding-left: 10px;
+    }
+  }
+}

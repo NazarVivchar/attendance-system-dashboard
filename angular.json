@@ -1,7 +1,58 @@
 {
-  "version": 2,
+  "cli": {
+    "analytics": "a4f1250a-3b52-4e50-be02-7c0a25b3e272"
+  },
+  "version":1,
   "projects": {
-    "attendance-system-dashboard": "apps/attendance-system-dashboard",
-    "attendance-system-dashboard-e2e": "apps/attendance-system-dashboard-e2e"
+    "attendance-system-dashboard": {
+      "root": "",
+      "sourceRoot": "apps/attendance-system-dashboard/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist",
+            "index": "apps/attendance-system-dashboard/src/index.html",
+            "main": "apps/attendance-system-dashboard/src/main.ts",
+            "tsConfig": "apps/attendance-system-dashboard/tsconfig.app.json",
+            "polyfills": "apps/attendance-system-dashboard/src/polyfills.ts",
+            "assets": [
+              "apps/attendance-system-dashboard/src/assets",
+              "apps/attendance-system-dashboard/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "apps/attendance-system-dashboard/src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/auth/feature-auth/src/assets",
+                "output": "assets/auth"
+              }
+            ],
+            "styles": [
+              "apps/attendance-system-dashboard/src/styles.scss",
+              "apps/attendance-system-dashboard/src/styles/main.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "attendance-system-dashboard:build",
+            "port": 4200,
+            "host": "localhost"
+          }
+        }
+      }
+    },
+    "attendance-system-dashboard-e2e": "apps/attendance-system-dashboard-e2e",
+    "auth-feature-auth": "libs/auth/feature-auth",
+    "workspace-data-access-workspace": "libs/workspace/data-access-workspace",
+    "workspace-models-workspace": "libs/workspace/models-workspace"
   }
 }

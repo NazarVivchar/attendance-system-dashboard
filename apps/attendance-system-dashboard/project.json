@@ -2,7 +2,7 @@
   "projectType": "application",
   "root": "apps/attendance-system-dashboard",
   "sourceRoot": "apps/attendance-system-dashboard/src",
-  "prefix": "attendance-system",
+  "prefix": "asd",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",

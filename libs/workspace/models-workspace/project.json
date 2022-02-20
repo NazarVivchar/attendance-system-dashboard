@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/workspace/models-workspace",
+  "sourceRoot": "libs/workspace/models-workspace/src",
+  "prefix": "attendance-system-dashboard",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/workspace/models-workspace"],
+      "options": {
+        "jestConfig": "libs/workspace/models-workspace/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/workspace/models-workspace/src/**/*.ts",
+          "libs/workspace/models-workspace/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,5 +1,5 @@
 {
-  "npmScope": "attendance-system",
+  "npmScope": "attendance-system-dashboard",
   "affected": {
     "defaultBase": "master"
   },
@@ -16,9 +16,15 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "Y2Q2YTI2NjYtZjQ1YS00MmJmLTlkYWQtYWM3ODZlMTM1OTdkfHJlYWQtd3JpdGU="
       }
     }
   },

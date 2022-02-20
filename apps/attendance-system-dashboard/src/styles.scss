@@ -1,1 +1,161 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$md-primary-palette: (
+  50 : #e4f9fe,
+  100 : #bcf1fd,
+  200 : #8fe8fc,
+  300 : #62dffb,
+  400 : #41d8fa,
+  500 : #1fd1f9,
+  600 : #1bccf8,
+  700 : #17c6f7,
+  800 : #12c0f6,
+  900 : #0ab5f5,
+  A100 : #ffffff,
+  A200 : #ebf9ff,
+  A400 : #b8eaff,
+  A700 : #9ee2ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-warn-palette: (
+  50 : #fee9e4,
+  100 : #fdc8bc,
+  200 : #fca38f,
+  300 : #fb7e62,
+  400 : #fa6341,
+  500 : #f9471f,
+  600 : #f8401b,
+  700 : #f73717,
+  800 : #f62f12,
+  900 : #f5200a,
+  A100 : #ffffff,
+  A200 : #ffeceb,
+  A400 : #ffbcb8,
+  A700 : #ffa59e,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-accent-palette: (
+  50 : #e0e0e0,
+  100 : #b3b3b3,
+  200 : #808080,
+  300 : #4d4d4d,
+  400 : #262626,
+  500 : #000000,
+  600 : #000000,
+  700 : #000000,
+  800 : #000000,
+  900 : #000000,
+  A100 : #a6a6a6,
+  A200 : #8c8c8c,
+  A400 : #737373,
+  A700 : #666666,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$attendance-system-dashboard-primary: mat.define-palette($md-primary-palette);
+$attendance-system-dashboard-accent: mat.define-palette($md-accent-palette, 500, 400, 700);
+
+// The warn palette is optional (defaults to red).
+$attendance-system-dashboard-warn: mat.define-palette($md-warn-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$attendance-system-dashboard-theme: mat.define-light-theme((
+  color: (
+    primary: $attendance-system-dashboard-primary,
+    accent: $attendance-system-dashboard-accent,
+    warn: $attendance-system-dashboard-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($attendance-system-dashboard-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto,
+  "Helvetica Neue", sans-serif;
+  background: linear-gradient(-45deg, #6d17cb, #0652C5, #1FD1F9);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

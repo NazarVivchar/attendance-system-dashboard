@@ -1,0 +1,38 @@
+<div class="log-in-container">
+  <h1 class="white">Digin</h1>
+
+  <span class="side-text">Best solutions for your business</span>
+
+  <div class="content-wrapper-level-1">
+    <div class="content-wrapper-level-2">
+      <div class="content-wrapper-level-3">
+        <h2 class="primary">Welcome back!</h2>
+
+        <div class="log-in-form-wrapper">
+          <mat-form-field appearance="outline" hideRequiredMarker>
+            <mat-label>Workspace name</mat-label>
+            <input matInput [formControl]="nameControl">
+            <mat-error *ngIf="nameControl.errors?.['required']">Workspace name is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" hideRequiredMarker>
+            <mat-label>Workspace password</mat-label>
+            <input matInput type="password" [formControl]="passwordControl">
+            <mat-error *ngIf="passwordControl.errors?.['required']">Password is required</mat-error>
+          </mat-form-field>
+
+          <button mat-raised-button color="accent" (click)="submit()">
+            Submit
+            <mat-icon class="suffix">done_outline</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="waves-wrapper">
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="wave wave-3"></div>
+  </section>
+</div>
