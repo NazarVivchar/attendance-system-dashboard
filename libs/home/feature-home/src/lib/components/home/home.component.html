@@ -1,0 +1,20 @@
+<div class="container">
+  <asd-workspace-info
+    [workspace]="workspace$ | async"
+    [employees]="employees$ | async"
+  ></asd-workspace-info>
+
+  <div class="content">
+    <div class="employees-highscores">
+      <asd-employees-highscore [employees]="employees$ | async"></asd-employees-highscore>
+    </div>
+
+    <div class="todays-employee-stats">
+
+    </div>
+
+    <div class="average-workday-duration">
+
+    </div>
+  </div>
+</div>

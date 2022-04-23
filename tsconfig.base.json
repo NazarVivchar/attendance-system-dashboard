@@ -13,17 +13,37 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@asd/auth/feature-auth": ["libs/auth/feature-auth/src/index.ts"],
-      "@asd/shared/ui-shared": [
-        "libs/shared/ui-shared/src/index.ts"
+      "@asd/auth/shared-auth": ["libs/auth/shared-auth/src/index.ts"],
+      "@asd/dashboard/feature-dashboard": [
+        "libs/dashboard/feature-dashboard/src/index.ts"
       ],
+      "@asd/employees/data-access-employees": [
+        "libs/employees/data-access-employees/src/index.ts"
+      ],
+      "@asd/employees/models-employees": [
+        "libs/employees/models-employees/src/index.ts"
+      ],
+      "@asd/employees/ui-employees": [
+        "libs/employees/ui-employees/src/index.ts"
+      ],
+      "@asd/home/feature-home": ["libs/home/feature-home/src/index.ts"],
+      "@asd/notifications/feature-notifications": [
+        "libs/notifications/feature-notifications/src/index.ts"
+      ],
+      "@asd/shared/feature-shared": ["libs/shared/feature-shared/src/index.ts"],
+      "@asd/shared/ui-shared": ["libs/shared/ui-shared/src/index.ts"],
       "@asd/workspace/data-access-workspace": [
         "libs/workspace/data-access-workspace/src/index.ts"
       ],
       "@asd/workspace/models-workspace": [
         "libs/workspace/models-workspace/src/index.ts"
+      ],
+      "@asd/workspace/ui-workspace": [
+        "libs/workspace/ui-workspace/src/index.ts"
       ]
     }
   },

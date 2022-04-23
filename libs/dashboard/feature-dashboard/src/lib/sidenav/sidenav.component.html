@@ -1,0 +1,39 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened class="navigation-list">
+    <div class="navigation-top-section">
+
+      <div class="title">
+        <h1 class="m-b-0">Digin</h1>
+        <p class="primary">Attendance System</p>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div matRipple class="nav-item" routerLink="home" routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: false }">
+        <mat-icon>home</mat-icon>
+        <h3>Home</h3>
+      </div>
+
+      <div matRipple class="nav-item" routerLink="employees" routerLinkActive="active">
+        <mat-icon>people</mat-icon>
+        <h3>Employees</h3>
+      </div>
+    </div>
+
+    <div class="navigation-bottom-section">
+      <div class="nav-item">
+        <button mat-raised-button color="accent" class="big-button" (click)="logOut()">
+          <mat-icon class="prefix">logout_outline</mat-icon>
+          Log Out
+        </button>
+      </div>
+    </div>
+
+
+  </mat-sidenav>
+
+  <mat-sidenav-content class="navigation-content">
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

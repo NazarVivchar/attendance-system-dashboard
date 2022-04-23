@@ -1,5 +1,5 @@
 {
-  "npmScope": "attendance-system-dashboard",
+  "npmScope": "asd",
   "affected": {
     "defaultBase": "master"
   },

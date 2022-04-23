@@ -22,4 +22,15 @@
       padding-left: 10px;
     }
   }
+
+  &.big-button {
+    font-size: 20px;
+    line-height: 40px;
+
+    mat-icon {
+      font-size: 25px;
+      height: 25px;
+      width: 25px;
+    }
+  }
 }

@@ -1,6 +1,11 @@
 import {WorkspaceModel} from "@asd/workspace/models-workspace";
 import {createReducer, on} from "@ngrx/store";
-import {singInToWorkspace, singInToWorkspaceFailure, singInToWorkspaceSuccess} from "../actions/workspace.actions";
+import {
+  resetWorkspace, setWorkspace,
+  singInToWorkspace,
+  singInToWorkspaceFailure,
+  singInToWorkspaceSuccess
+} from "../actions/workspace.actions";
 
 export const workspaceFeatureKey = 'workspace';
 
@@ -20,6 +25,12 @@ export const initialState: State = {
 
 export const reducer = createReducer(
   initialState,
+  on(setWorkspace, (state, {workspace}) => ({
+    ...state,
+    workspace,
+    loaded: true,
+    error: null,
+  })),
   on(singInToWorkspace, (state) => ({
     ...state,
     loading: true,
@@ -35,5 +46,6 @@ export const reducer = createReducer(
     ...state,
     error,
     loading: false,
-  }))
+  })),
+  on(resetWorkspace, () => ({...initialState}))
 )

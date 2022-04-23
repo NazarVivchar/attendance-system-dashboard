@@ -12,8 +12,7 @@ const ROUTES: Routes = [
       {path: 'log-in', component: LogInComponent}
     ]
   },
-
-
+  {path: '**', redirectTo: '/not-found'}
 ]
 
 @NgModule({

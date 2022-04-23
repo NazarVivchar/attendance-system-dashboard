@@ -11,7 +11,16 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {DataAccessWorkspaceModule} from "@asd/workspace/data-access-workspace";
 
 @NgModule({
-  imports: [CommonModule, FeatureAuthRouting, MatDividerModule, MatIconModule, MatButtonModule, MatInputModule, ReactiveFormsModule, DataAccessWorkspaceModule],
+  imports: [
+    CommonModule,
+    FeatureAuthRouting,
+    MatDividerModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    DataAccessWorkspaceModule,
+  ],
   declarations: [
     LogInComponent,
     AuthPageComponent

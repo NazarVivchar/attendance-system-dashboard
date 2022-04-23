@@ -6,4 +6,5 @@ const selectWorkspaceState = createSelector(selectState, (state) => state[worksp
 
 export const selectWorkspace = createSelector(selectWorkspaceState, (state) => state.workspace);
 export const selectWorkspaceLoading = createSelector(selectWorkspaceState, (state) => state.loading);
+export const selectWorkspaceLoaded = createSelector(selectWorkspaceState, (state) => state.loaded);
 export const selectWorkspaceError = createSelector(selectWorkspaceState, (state) => state.error);

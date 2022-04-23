@@ -2,12 +2,36 @@
 {
   h1 {
     font-size: 60px;
+    line-height: 80px;
     font-weight: 900;
   }
 
   h2 {
     font-size: 30px;
+    line-height: 40px;
     font-weight: 700;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+
+  .small-text {
+    font-size: 10px
+  }
+
+  .medium-text {
+    font-size: 15px
+  }
+
+  .large-text {
+    font-size: 20px
+  }
+
+  .bold-text {
+    font-weight: bold;
   }
 
   .primary {
@@ -20,6 +44,10 @@
 
   .white {
     color: white;
+  }
+
+  .text-center {
+    text-align: center;
   }
 }
 

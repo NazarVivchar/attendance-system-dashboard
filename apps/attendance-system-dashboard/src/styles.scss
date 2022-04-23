@@ -135,6 +135,10 @@ $attendance-system-dashboard-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
+@import '~ngx-toastr/toastr';
+
+
+
 html, body {
   height: 100%;
 }

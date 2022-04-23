@@ -28,6 +28,8 @@
     "@ngrx/store": "^13.0.2",
     "@ngrx/store-devtools": "^13.0.2",
     "@nrwl/angular": "13.8.1",
+    "lodash": "^4.17.21",
+    "ngx-toastr": "^14.2.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
@@ -49,6 +51,7 @@
     "@nrwl/tao": "13.8.1",
     "@nrwl/workspace": "13.8.1",
     "@types/jest": "27.0.2",
+    "@types/lodash": "^4.14.181",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "~5.10.0",
     "@typescript-eslint/parser": "~5.10.0",

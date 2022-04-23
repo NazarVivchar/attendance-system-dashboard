@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="workspace-name">
+    <span class="primary">{{ workspace?.name || 'Unknown' }}</span> Workspace Dashboard
+  </h1>
+
+  <div class="workspace-info">
+    <h3 class="white m-r-20">|&nbsp;&nbsp;Using the system since <span class="primary">{{workspace?.createdAt || 'unknown' | date : 'MMMM d, y'}}</span></h3>
+
+    <h3 class="white m-r-20">|&nbsp;&nbsp;You have <span class="primary">{{ employees?.length || 'unknown' }}</span> employees in the system</h3>
+
+    <h3 class="white m-r-20">|&nbsp;&nbsp;Your employees have tracked <span class="primary">{{totalWorkdaysTracked}}</span> workdays</h3>
+  </div>
+</div>

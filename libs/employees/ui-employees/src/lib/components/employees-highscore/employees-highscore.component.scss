@@ -1,0 +1,86 @@
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 2px;
+  box-shadow: rgba(50, 50, 93, 0.5) 0 2px 5px -1px, rgba(0, 0, 0, 0.6) 0px 1px 3px -1px;
+  border-radius: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .employees {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media screen and (max-width: 1360px) {
+      flex-direction: column;
+      overflow: scroll;
+      justify-content: center;
+    }
+
+    .avatar {
+      height: 60px;
+      width: 60px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      transition: all .1s ease-out;
+
+      &:hover {
+        transform: scale(1.03)
+      }
+
+      &.disabled {
+        pointer-events: none;
+      }
+    }
+
+    .badge-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .most-hours-worked {
+      color: blueviolet;
+
+      .avatar {
+        border: 3px solid blueviolet;
+        border-radius: 50%;
+      }
+    }
+
+    .most-days-worked {
+      color: green;
+
+      .avatar {
+        border: 3px solid green;
+        border-radius: 50%;
+      }
+    }
+
+    .earliest-clock-in {
+      color: #debc01;
+
+      .avatar {
+        border: 3px solid #debc01;
+        border-radius: 50%;
+      }
+    }
+
+    .latest-clock-out {
+      color: #e81d56;
+
+      .avatar {
+        border: 3px solid #e81d56;
+        border-radius: 50%;
+      }
+    }
+  }
+}
