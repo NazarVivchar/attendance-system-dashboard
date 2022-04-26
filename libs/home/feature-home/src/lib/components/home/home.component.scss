@@ -43,8 +43,6 @@
     .todays-employee-stats {
       grid-row: 1 / 12;
 
-      background: cadetblue;
-
       @media screen and (max-width: 1100px) {
         min-height: 600px;
       }

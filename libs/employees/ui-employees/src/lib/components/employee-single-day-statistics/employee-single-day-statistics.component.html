@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="avatar">
+    <asd-employee-avatar [avatarSrc]="employee.avatar"></asd-employee-avatar>
+  </div>
+
+  <div class="content">
+    <div class="header">
+      <div class="primary large-text">
+        {{employee.firstName}} {{employee.lastName}}
+      </div>
+    </div>
+
+    <div class="body medium-text">
+      <ng-container *ngIf="hasCheckedInToday; else notWorkingToday">
+        <span class="statistic-1">
+          Workday started: <span class="primary bold-text">{{checkedInTime ? (checkedInTime | date : 'h:mm a') : 'No record' }}</span>
+        </span>
+
+        <span class="statistic-2">
+          Workday ended: <span class="primary bold-text">{{checkedOutTime ? (checkedOutTime | date : 'h:mm a') : 'No record' }}</span>
+        </span>
+
+        <span class="statistic-3">
+          Duration:
+          <span class="primary bold-text" *ngIf="workingForDate">{{workingForDate |  date : 'h:mm:ss' }}</span>
+          <span class="primary bold-text" *ngIf="!workingForDate">Calculating...</span>
+        </span>
+      </ng-container>
+    </div>
+  </div>
+
+  <button mat-button color="primary" (click)="goToEmployee()">
+    <span>Details</span>
+    <mat-icon class="suffix">arrow_right_alt</mat-icon>
+  </button>
+</div>
+
+<ng-template #notWorkingToday>
+  <span class="not-working medium-text bold-text">Not working today</span>
+</ng-template>

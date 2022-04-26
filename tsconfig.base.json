@@ -27,6 +27,9 @@
       "@asd/employees/models-employees": [
         "libs/employees/models-employees/src/index.ts"
       ],
+      "@asd/employees/shared-employees": [
+        "libs/employees/shared-employees/src/index.ts"
+      ],
       "@asd/employees/ui-employees": [
         "libs/employees/ui-employees/src/index.ts"
       ],

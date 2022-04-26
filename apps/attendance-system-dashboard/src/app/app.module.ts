@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FeatureNotificationsModule} from "@asd/notifications/feature-notifications";
 import {SharedAuthModule} from "@asd/auth/shared-auth";
 import {MatButtonModule} from "@angular/material/button";
+import {NgxSpinnerModule} from "ngx-spinner";
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import {MatButtonModule} from "@angular/material/button";
     FeatureNotificationsModule,
     SharedAuthModule,
     MatButtonModule,
+    NgxSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

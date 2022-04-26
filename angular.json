@@ -30,7 +30,8 @@
             ],
             "styles": [
               "apps/attendance-system-dashboard/src/styles.scss",
-              "apps/attendance-system-dashboard/src/styles/main.scss"
+              "apps/attendance-system-dashboard/src/styles/main.scss",
+              "node_modules/ngx-spinner/animations/square-loader.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
@@ -147,6 +148,32 @@
             "lintFilePatterns": [
               "libs/employees/models-employees/src/**/*.ts",
               "libs/employees/models-employees/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "employees-shared-employees": {
+      "projectType": "library",
+      "root": "libs/employees/shared-employees",
+      "sourceRoot": "libs/employees/shared-employees/src",
+      "prefix": "asd",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/employees/shared-employees"],
+          "options": {
+            "jestConfig": "libs/employees/shared-employees/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/employees/shared-employees/src/**/*.ts",
+              "libs/employees/shared-employees/src/**/*.html"
             ]
           }
         }

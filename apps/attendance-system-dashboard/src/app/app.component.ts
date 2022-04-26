@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {DataAccessWorkspaceService} from "@asd/workspace/data-access-workspace";
 
 @Component({

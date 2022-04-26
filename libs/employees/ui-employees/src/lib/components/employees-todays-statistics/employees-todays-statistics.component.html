@@ -1,0 +1,16 @@
+<div class="container">
+  <h2 class="text-center m-b-0">Today's statistics</h2>
+
+  <div *ngIf="employees?.length; else noEmployeesPlaceholder" class="statistics-list m-t-20">
+    <div *ngFor="let employee of employees" class="single-statistic-item">
+      <asd-employee-single-day-statistics [employee]="employee"></asd-employee-single-day-statistics>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #noEmployeesPlaceholder>
+  <div class="no-employees-placeholder">
+    <span class="bold-text large-text gray">No employees found</span>
+  </div>
+</ng-template>
