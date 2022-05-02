@@ -104,6 +104,17 @@ export class EmployeeTimeService {
     return date.getTime() > firstDay.getTime() && date.getTime() < lastDay.getTime()
   }
 
+  public isDateInCurrentWeek(date: Date): boolean {
+    const currentDate = new Date(), y = currentDate.getFullYear(), m = currentDate.getMonth(), d = currentDate.getDate();
+    const firstDay = new Date(y, m, d - currentDate.getDay());
+    const lastDay = new Date(y, m, d - currentDate.getDay() + 8);
+
+    firstDay.setHours(24)
+    lastDay.setMilliseconds(lastDay.getMilliseconds() - 1)
+
+    return date.getTime() > firstDay.getTime() && date.getTime() < lastDay.getTime()
+  }
+
   private isDateToday(date: Date): boolean {
     const startOfDay = new Date();
     startOfDay.setUTCHours(0, 0, 0, 0);

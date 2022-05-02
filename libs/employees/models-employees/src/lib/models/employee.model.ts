@@ -8,4 +8,6 @@ export interface EmployeeModel {
   workspace: string;
   lastCheck: CheckModel,
   allChecks: CheckModel[],
+  updatedAt: Date,
+  createdAt: Date,
 }

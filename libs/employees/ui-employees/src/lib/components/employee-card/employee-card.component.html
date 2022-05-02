@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="header">
+    <div class="avatar">
+      <asd-employee-avatar [avatarSrc]="employee.avatar"></asd-employee-avatar>
+    </div>
+
+    <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" class="wave-1">
+      <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:rgba(255,255,255,0.5)"></path>
+    </svg>
+
+    <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" class="wave-2">
+      <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:rgba(255,255,255,1);"></path>
+    </svg>
+  </div>
+
+  <div class="content m-t-10">
+    <h2>{{employee.firstName}} {{employee.lastName}}</h2>
+  </div>
+
+  <div class="actions m-t-20">
+    <button mat-raised-button color="accent" class="big-button" (click)="goToEmployee()">
+      <mat-icon class="prefix">manage_accounts_outline</mat-icon>
+      Manage
+    </button>
+  </div>
+
+</div>

@@ -2,6 +2,7 @@ import {Component, Input, OnDestroy} from '@angular/core';
 import {EmployeeModel} from "@asd/employees/models-employees";
 import {EmployeeTimeService} from "@asd/employees/shared-employees";
 import {interval, Subscription, tap} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'asd-employee-single-day-statistics',
@@ -15,7 +16,7 @@ export class EmployeeSingleDayStatisticsComponent implements OnDestroy {
 
   private timerSubscription!: Subscription;
 
-  constructor(private readonly employeeTimeService: EmployeeTimeService) {
+  constructor(private readonly employeeTimeService: EmployeeTimeService, private readonly router: Router) {
     this.initTimer();
   }
 
@@ -24,7 +25,7 @@ export class EmployeeSingleDayStatisticsComponent implements OnDestroy {
   }
 
   public goToEmployee(): void {
-    console.log(this.employee);
+    this.router.navigate(['/', 'dashboard', 'employees', this.employee._id]);
   }
 
   public get hasCheckedInToday(): boolean {

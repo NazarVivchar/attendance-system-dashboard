@@ -7,4 +7,5 @@ import {Component, Input} from '@angular/core';
 })
 export class EmployeeAvatarComponent {
   @Input() public avatarSrc!: string;
+  @Input() public round = true;
 }

@@ -8,3 +8,5 @@ export const selectEmployees = createSelector(selectEmployeesState, (state) => s
 export const selectEmployeesLoading = createSelector(selectEmployeesState, (state) => state.loading);
 export const selectEmployeesLoaded = createSelector(selectEmployeesState, (state) => state.loaded);
 export const selectEmployeesError = createSelector(selectEmployeesState, (state) => state.error);
+
+export const selectEmployeeById = (id: string) => createSelector(selectEmployees, (employees) => employees?.find(employee => employee._id === id) || null);

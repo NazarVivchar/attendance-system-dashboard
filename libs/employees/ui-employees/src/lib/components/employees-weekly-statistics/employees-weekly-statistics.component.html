@@ -1,0 +1,24 @@
+<div class="container dark">
+  <h2 class="text-center m-b-0">Weekly average clocked hours</h2>
+
+
+  <ng-container *ngIf="getAverageHoursWorkedPerDayForCurrentWeek() as averageHoursWorked; else noCheckDataPlaceholder">
+    <div class="chart">
+      <ngx-charts-bar-vertical
+        scheme="cool"
+        [results]="averageHoursWorked"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="false"
+        [showYAxisLabel]="true"
+        yAxisLabel="Average hours clocked">
+      </ngx-charts-bar-vertical>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #noCheckDataPlaceholder>
+  <div class="no-check-data-placeholder">
+    <span class="bold-text large-text gray">No complete workdays for the week</span>
+  </div>
+</ng-template>

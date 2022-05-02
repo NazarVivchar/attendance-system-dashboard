@@ -1,0 +1,52 @@
+.container {
+  border-radius: 50px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  margin: 2px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  //box-shadow: rgba(50, 50, 93, 0.5) 0 2px 5px -1px, rgba(0, 0, 0, 0.6) 0px 1px 3px -1px;
+  overflow: hidden;
+  //background: rgba(245, 245, 245, 0.84);
+  padding: 25px;
+
+  .badge {
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: white;
+    border: solid 1px #1FD1F9;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: rgba(50, 50, 93, 0.5) 0 2px 5px -1px, rgba(0, 0, 0, 0.6) 0px 1px 3px -1px;
+    box-sizing: border-box;
+    margin: 2px;
+
+    &.black {
+      color: white;
+      background: black;
+    }
+
+    &.inactive {
+      color: #f9471f;
+      border-color: #f9471f;
+      width: 100%;
+    }
+
+    &.active {
+      color: #1FD1F9;
+      border-color: #1FD1F9;
+      width: 100%;
+    }
+  }
+
+  .statistics {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

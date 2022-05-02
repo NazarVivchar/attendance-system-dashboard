@@ -1,6 +1,9 @@
 img {
   height: 100%;
-  width: 100%;
-  border-radius: 50%;
+  width: auto;
   background: rgba(213, 213, 213, 0.6);
+
+  &.round {
+    border-radius: 50%;
+  }
 }

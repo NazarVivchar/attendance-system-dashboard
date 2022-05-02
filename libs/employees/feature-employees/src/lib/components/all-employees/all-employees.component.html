@@ -1,0 +1,13 @@
+<div class="container">
+  <div *ngIf="(employees$ | async)?.length; else noEmployeesPlaceholder" class="employees-grid">
+    <ng-container *ngFor="let employee of employees$ | async">
+      <asd-employee-card [employee]="employee"></asd-employee-card>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #noEmployeesPlaceholder>
+  <div class="no-employees-placeholder">
+    <span class="bold-text extra-large-text gray">No employees found</span>
+  </div>
+</ng-template>

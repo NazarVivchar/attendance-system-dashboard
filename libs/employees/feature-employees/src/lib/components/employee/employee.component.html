@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="employee-general-info">
+    <asd-employee-general-details [employee]="employee$ | async"></asd-employee-general-details>
+  </div>
+
+  <div class="employee-current-status">
+    <asd-employee-status [employee]="employee$ | async"></asd-employee-status>
+  </div>
+  <div class="employee-checks"></div>
+  <div class="employee-charts"></div>
+</div>

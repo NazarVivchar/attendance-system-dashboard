@@ -24,6 +24,9 @@
       "@asd/employees/data-access-employees": [
         "libs/employees/data-access-employees/src/index.ts"
       ],
+      "@asd/employees/feature-employees": [
+        "libs/employees/feature-employees/src/index.ts"
+      ],
       "@asd/employees/models-employees": [
         "libs/employees/models-employees/src/index.ts"
       ],

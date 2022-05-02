@@ -1,4 +1,6 @@
 .mat-typography {
+  font-weight: 500;
+
   h1 {
     font-size: 60px;
     line-height: 80px;
@@ -29,6 +31,10 @@
     font-size: 20px
   }
 
+  .extra-large-text {
+    font-size: 30px
+  }
+
   .bold-text {
     font-weight: bold;
   }
@@ -39,6 +45,14 @@
 
   .accent {
     color: black;
+  }
+
+  .warning {
+    color: orange;
+  }
+
+  .error {
+    color: #f9471f;
   }
 
   .white {

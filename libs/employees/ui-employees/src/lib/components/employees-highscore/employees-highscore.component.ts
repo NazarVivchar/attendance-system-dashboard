@@ -3,6 +3,7 @@ import {CheckModel, EmployeeModel} from "@asd/employees/models-employees";
 import maxBy from 'lodash/maxBy';
 import minBy from "lodash/minBy";
 import {EmployeeTimeService} from "@asd/employees/shared-employees";
+import {Router} from "@angular/router";
 
 interface EmployeeWithHoursWorkedModel {
   employee: EmployeeModel,
@@ -27,7 +28,7 @@ interface EmployeeWithCheckModel {
 export class EmployeesHighscoreComponent {
   @Input() public employees!: EmployeeModel[] | null;
 
-  constructor(private readonly employeeTimeService: EmployeeTimeService) {
+  constructor(private readonly employeeTimeService: EmployeeTimeService, private readonly router: Router) {
   }
 
   public get employeeWithMostHoursWorked(): EmployeeWithHoursWorkedModel | null {
@@ -161,6 +162,6 @@ export class EmployeesHighscoreComponent {
   }
 
   public goToEmployee(employee: EmployeeModel): void {
-    console.log(employee);
+    this.router.navigate(['/', 'dashboard', 'employees', employee._id]);
   }
 }

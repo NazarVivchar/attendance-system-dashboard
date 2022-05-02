@@ -1,0 +1,24 @@
+<div class="container">
+  <ng-container *ngIf="employee">
+    <h3 class="badge" [ngClass]="{active: isWorking, inactive: !isWorking}">{{ isWorking ? 'At work' : 'Not working' }}</h3>
+
+    <div class="statistics m-t-20">
+      <p class="badge black">
+        Workday started: <span
+        class="primary bold-text">{{checkedInTime && hasCheckedInToday ? (checkedInTime | date : 'h:mm a') : 'No data for today' }}</span>
+      </p>
+
+      <p class="badge black">
+        Workday ended: <span
+        class="primary bold-text">{{checkedOutTime && hasCheckedInToday ? (checkedOutTime | date : 'h:mm a') : 'No data for today' }}</span>
+      </p>
+
+      <p class="badge black">
+        Duration:
+        <span class="primary bold-text" *ngIf="workingForDate && hasCheckedInToday">{{workingForDate |  date : 'h:mm:ss' }}</span>
+        <span class="primary bold-text" *ngIf="!workingForDate && hasCheckedInToday">Calculating...</span>
+        <span class="primary bold-text">No data for today</span>
+      </p>
+    </div>
+  </ng-container>
+</div>

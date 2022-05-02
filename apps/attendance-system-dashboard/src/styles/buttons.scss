@@ -23,6 +23,18 @@
     }
   }
 
+  &.warning {
+    mat-icon {
+      color: orange;
+    }
+  }
+
+  &.error {
+    mat-icon {
+      color: #f9471f;
+    }
+  }
+
   &.big-button {
     font-size: 20px;
     line-height: 40px;

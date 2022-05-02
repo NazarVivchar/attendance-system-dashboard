@@ -1,0 +1,39 @@
+<div class="container">
+  <ng-container *ngIf="employee">
+    <div class="avatar-wrapper">
+      <div class="avatar">
+        <asd-employee-avatar [avatarSrc]="employee?.avatar || ''" [round]="true"></asd-employee-avatar>
+      </div>
+
+      <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" class="wave-1">
+        <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:rgba(255,255,255,0.5)"></path>
+      </svg>
+
+      <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" class="wave-2">
+        <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:rgba(255,255,255,1);"></path>
+      </svg>
+    </div>
+
+    <div class="content">
+      <h1 class="primary">{{employee.firstName}} {{employee.lastName}}</h1>
+
+      <span class="medium-text">
+        <p><span class="bold-text">Created:</span> {{employee.createdAt | date : 'MMMM d, y'}}</p>
+
+        <p><span class="bold-text">Last time updated:</span> {{employee.updatedAt | date : 'MMMM d, y'}}</p>
+      </span>
+
+      <div class="actions">
+        <button mat-raised-button class="warning" (click)="edit()">
+          Edit
+          <mat-icon class="suffix">edit_outline</mat-icon>
+        </button>
+
+        <button mat-raised-button class="error" (click)="delete()">
+          Delete
+          <mat-icon class="suffix">done_forever_outline</mat-icon>
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</div>

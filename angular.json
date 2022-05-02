@@ -128,6 +128,32 @@
       },
       "tags": []
     },
+    "employees-feature-employees": {
+      "projectType": "library",
+      "root": "libs/employees/feature-employees",
+      "sourceRoot": "libs/employees/feature-employees/src",
+      "prefix": "asd",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/employees/feature-employees"],
+          "options": {
+            "jestConfig": "libs/employees/feature-employees/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/employees/feature-employees/src/**/*.ts",
+              "libs/employees/feature-employees/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "employees-models-employees": {
       "projectType": "library",
       "root": "libs/employees/models-employees",

@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 import {DashboardPageComponent} from "./dashboard-page/dashboard-page.component";
+import {FeatureEmployeesModule} from "@asd/employees/feature-employees";
 
 const ROUTES: Routes = [
   {
@@ -18,7 +19,7 @@ const ROUTES: Routes = [
       },
       {
         path: 'employees',
-        loadChildren: () => import('@asd/home/feature-home').then((m) => m.FeatureHomeModule)
+        loadChildren: () => import('@asd/employees/feature-employees').then((m) => m.FeatureEmployeesModule)
       },
     ]
   },
